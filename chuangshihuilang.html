@@ -11884,7 +11884,7 @@ if (typeof window !== 'undefined') {
                     if (!iframeWindow || !selectedDragonSpawn.value) return;
                     iframeWindow.postMessage({
                         type: 'dragon_spawn_focus',
-                        spawn: selectedDragonSpawn.value
+                        spawn: JSON.parse(JSON.stringify(selectedDragonSpawn.value))
                     }, '*');
                 }
 
@@ -12020,7 +12020,7 @@ if (typeof window !== 'undefined') {
                     if (!iframeWindow || !selectedJiuzhouSpawn.value) return;
                     iframeWindow.postMessage({
                         type: 'jiuzhou_spawn_focus',
-                        spawn: selectedJiuzhouSpawn.value
+                        spawn: JSON.parse(JSON.stringify(selectedJiuzhouSpawn.value))
                     }, '*');
                 }
 
@@ -12204,7 +12204,7 @@ if (typeof window !== 'undefined') {
                     if (!iframeWindow || !selectedAmberSpawn.value) return;
                     iframeWindow.postMessage({
                         type: 'amber_spawn_focus',
-                        spawn: selectedAmberSpawn.value
+                        spawn: JSON.parse(JSON.stringify(selectedAmberSpawn.value))
                     }, '*');
                 }
 
